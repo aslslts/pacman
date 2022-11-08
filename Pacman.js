@@ -11,7 +11,7 @@ class Pacman {
   }
 
   shouldMove() {
-    if (!this.dir) return false;
+    if (!this.dir) return;
 
     if (this.timer === this.speed) {
       this.timer = 0;
@@ -44,7 +44,7 @@ class Pacman {
     this.pos = nextMovePos;
   }
 
-  handleKeyInput(e, objectExist) {
+  handleKeyInput = (e, objectExist) => {
     let dir;
 
     if (e.keyCode >= 37 && e.keyCode <= 40) {
@@ -60,7 +60,7 @@ class Pacman {
     )
       return;
     this.dir = dir;
-  }
+  };
 }
 
 export default Pacman;

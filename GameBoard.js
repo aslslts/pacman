@@ -8,6 +8,7 @@ class GameBoard {
   }
 
   showGameStatus(gameWin) {
+    // Create and show game win or game over
     const div = document.createElement("div");
     div.classList.add("game-status");
     div.innerHTML = `${gameWin ? "WIN" : "GAME OVER!"}`;
@@ -26,7 +27,7 @@ class GameBoard {
       div.style.cssText = `width: ${CELL_SIZE}px; height: ${CELL_SIZE}px;`;
       this.DOMGrid.appendChild(div);
       this.grid.push(div);
-
+    // Add dots
       if (CLASS_LIST[square] === OBJECT_TYPE.DOT) this.dotCount++;
     });
   }

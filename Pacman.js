@@ -21,7 +21,7 @@ class Pacman {
   }
 
   getNextMove(objectExist) {
-    let getMovePos = this.pos + this.dir.movement;
+    let nextMovePos = this.pos + this.dir.movement;
 
     if (
       objectExist(nextMovePos, OBJECT_TYPE.WALL) ||
